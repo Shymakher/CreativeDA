@@ -1,0 +1,186 @@
+@import "../base";
+
+.header {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-rows: 1fr repeat(2, min-content) 1fr;
+  //grid-row-gap: 3.5rem;
+
+  background: linear-gradient(0deg, #c4c4c4 0%, rgba(0, 0, 0, 0.4) 0%), url('../../img/Header-background.png') top;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__menu {
+    display: grid;
+    grid-template-columns: minmax(10rem, 43rem) minmax(60rem, 80rem) minmax(16rem, 1fr);
+    grid-template-rows: auto 2px;
+    grid-template-areas: "logo menu socials";
+    //grid-template-areas: "logo" "menu" "socials";
+    height: 13rem;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      grid-column: 1 / -1;
+      content: '';
+      display: block;
+      background-color: #767575;
+      bottom: 0px;
+      height: 1px;
+      width: 100%;
+    }
+
+    .logo {
+      width: 7rem;
+      height: 7rem;
+      background-color: #11739d;
+      align-self: center;
+      justify-self: center;
+      box-shadow: 1rem 1rem 0.2rem 0 #c3c3c2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #f5f5f5;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    &__socials {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      align-items: center;
+      grid-column-gap: 2.5rem;
+      margin-left: 1rem;
+
+      .social {
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__items {
+      /*display: flex;
+      align-items: center;
+      justify-content: space-between;*/
+      display: grid;
+      grid-template-columns: repeat(6, max-content);
+      align-items: center;
+      justify-content: space-between;
+
+      .item {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        position: relative;
+
+        /*&:hover { Bad Practice
+          border-bottom: 2px solid #11739d;
+        }*/
+        &:hover {
+          &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            bottom: -1px;
+            height: 3px;
+            background-color: #11739d;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 590px) {
+      &__items {
+        grid-template-rows: repeat(6, 30px);
+        grid-template-columns: none;
+      }
+    }
+
+    @media screen and (max-width: 880px) {
+      height: auto;
+      grid-template-columns: none;
+      grid-template-rows: none;
+      grid-template-areas: "logo" "menu" "socials";
+
+      .logo {
+        grid-area: logo;
+      }
+      &__socials {
+        grid-area: socials;
+        justify-self: flex-end;
+        margin-right: 2rem;
+      }
+      &__items {
+        grid-area: menu;
+      }
+
+    }
+
+  }
+
+  .title {
+    font-size: 15rem;
+    letter-spacing: -8px;
+    text-align: center;
+
+  }
+  .title-desk {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 2rem;
+    line-height: 5rem;
+    font-weight: 500;
+    color: $color-blue;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: 570px) {
+    .title {
+      font-size: 11rem;
+    }
+    .title-desk {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .title {
+      font-size: 9rem;
+    }
+    .title-desk {
+      font-size: 1rem;
+    }
+  }
+  .scroll-down {
+    align-self: center;
+    justify-self: center;
+    &--title {
+      font-size: 13px;
+      line-height: 22px;
+      color: #ffffff;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    &--button {
+      cursor: pointer;
+      width: 65px;
+      height: 65px;
+      border-radius: 3.2rem;
+      background-color: rgba(128, 128, 128, 0);
+      border: 1px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+}

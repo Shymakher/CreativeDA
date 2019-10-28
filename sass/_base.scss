@@ -1,0 +1,97 @@
+$font-primary: 'Nunito', sans-serif;
+$color-white: #fff;
+$color-back: black;
+$color-blue: #11749e;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-white;
+  font-weight: 300;
+  //line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh min-content 30vw 30vw repeat(5, min-content) minmax(300px, 360px) minmax(100px, 120px);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 17.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media screen and (max-width: 970px) {
+    grid-template-rows: 100vh min-content min-content min-content repeat(5, min-content) minmax(300px, 360px) minmax(100px, 120px);
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, [col-start] minmax(min-content, 17.5rem) [col-end]) minmax(6rem, 1fr);
+}
+
+.half_content {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(4, [col-start] minmax(min-content, 17.5rem) [col-end]);
+}
+
+.half_content_back {
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] minmax(min-content, 17.5rem) [col-end]) minmax(6rem, 1fr);
+}

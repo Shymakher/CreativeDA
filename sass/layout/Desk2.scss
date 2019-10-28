@@ -1,0 +1,53 @@
+@import "../base";
+.desk2 {
+  grid-column: 1/-1;
+
+  &__text {
+  color: $color-back;
+    grid-column: 6 / -1;
+    background-color: #f3f3f3;
+    grid-template-rows: minmax(24rem, 26rem);
+    align-content: center;
+
+    &__content {
+      grid-column: 2 / 5;
+      display: grid;
+      align-content: space-between;
+      span{
+        font-size: 1.3rem;
+        line-height: 2.4rem;
+      }
+      h3{
+        font-size: 2.5rem;
+        line-height: 3.6rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+      }
+    }
+
+  }
+
+  &__img {
+    grid-column: 1 / 6;
+
+    background: linear-gradient(0deg, #c4c4c4 0%, rgba(0, 0, 0, 0.4) 0%), url('../../img/desk2.png') top;
+    //background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 970px) {
+    grid-template-rows: repeat(2, 38rem);
+    &__text {
+      grid-column: 1 / -1;
+    }
+    &__img{
+      grid-column: 1 / -1;
+      grid-row: 2/3;
+    }
+  }
+}

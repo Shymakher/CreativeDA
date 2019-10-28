@@ -1,0 +1,47 @@
+@import "./base";
+@mixin content {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) minmax(6rem, 1fr);
+}
+
+@mixin contentSolutionTeam {
+  display: grid;
+  grid-template-rows: 17.6rem min-content min-content;
+
+  color: $color-back;
+  padding-top: 90px;
+  margin-bottom: 10rem;
+
+  &__top {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-items: center;
+
+    img {
+      grid-row: 1/-1;
+      grid-column: 1/-1;
+    }
+
+    &--desc {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      text-align: center;
+      font-size: 3.8rem;
+      text-transform: uppercase;
+    }
+  }
+  &__middle {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+  }
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-gap: 4.5rem;
+
+  }
+}

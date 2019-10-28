@@ -1,0 +1,41 @@
+@import "../base";
+
+.btn {
+  &, &:link, &:visited {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  &__menu {
+    color: $color-white;
+    font-size: 2rem;
+  }
+
+  &__options {
+    background-color: $color-blue;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 1.4rem 0 1.4rem 2rem;
+
+    &--1 {
+      width: 70%;
+    }
+    &--2 {
+      width: 80%;
+    }
+    &--3 {
+      width: 90%;
+    }
+  }
+
+  &__submit {
+    background-color: $color-blue;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem 1.4rem 2rem;
+    justify-self: center;
+    margin-top: 4.5rem;
+  }
+}

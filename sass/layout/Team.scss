@@ -1,0 +1,41 @@
+@import "../mixins";
+
+.team {
+  grid-column: 2 / 10;
+
+  @include contentSolutionTeam;
+
+  &__bottom {
+    &__item {
+      display: grid;
+      grid-template-rows: min-content 5.3rem;
+      img {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        width: 100%;
+        //height: 100%;
+      }
+      &--desc {
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        justify-self: center;
+        align-self: end;
+        padding: 25px 40px 50px;
+        z-index: 3;
+        background-color: $color-white;
+        h3 {
+          font-size: 2rem;
+          color: $color-blue;
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+        }
+        p {
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}
