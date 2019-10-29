@@ -519,7 +519,7 @@ body {
         line-height: 2.4rem; }
   .desk1__img {
     grid-column: 6 / -1;
-    background: linear-gradient(0deg, #c4c4c4 0%, rgba(0, 0, 0, 0.4) 0%), url("../../img/desk1.png") top;
+    background: linear-gradient(0deg, #c4c4c4 0%, rgba(0, 0, 0, 0.4) 0%), url("../img/desk1.png") top;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -632,7 +632,7 @@ body {
         line-height: 2.4rem; }
   .desk2__img {
     grid-column: 1 / 6;
-    background: linear-gradient(0deg, #c4c4c4 0%, rgba(0, 0, 0, 0.4) 0%), url("../../img/desk2.png") top;
+    background: linear-gradient(0deg, #c4c4c4 0%, rgba(0, 0, 0, 0.4) 0%), url("../img/desk2.png") top;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -878,7 +878,7 @@ body {
 .options {
   grid-column: 1 / -1;
   padding: 10rem 0;
-  background: url("../../img/options.png") top;
+  background: url("../img/options.png") top;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1065,7 +1065,7 @@ body {
 .contact-us {
   grid-column: 1 / -1;
   padding: 10rem 0;
-  background: url("../../img/contactUs.png") top;
+  background: url("../img/contactUs.png") top;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
