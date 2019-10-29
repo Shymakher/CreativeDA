@@ -233,7 +233,7 @@ body {
   grid-column: 1 / -1;
   display: grid;
   grid-template-rows: 1fr repeat(2, min-content) 1fr;
-  background: linear-gradient(0deg, #c4c4c4 0%, rgba(0, 0, 0, 0.4) 0%), url("../../img/Header-background.png") top;
+  background: linear-gradient(0deg, #c4c4c4 0%, rgba(0, 0, 0, 0.4) 0%), url("./img/Header-background.png") top;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
