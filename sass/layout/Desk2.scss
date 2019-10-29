@@ -6,7 +6,7 @@
   color: $color-back;
     grid-column: 6 / -1;
     background-color: #f3f3f3;
-    grid-template-rows: minmax(24rem, 26rem);
+    grid-template-rows: minmax(24rem, min-content);
     align-content: center;
 
     &__content {

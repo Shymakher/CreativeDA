@@ -4,7 +4,7 @@
   &__text {
     grid-column: 1 / 6;
     background-color: #222222;
-    grid-template-rows: minmax(24rem, 26rem);
+    grid-template-rows: minmax(24rem, min-content);
     align-content: center;
 
     &__content {
